@@ -18,7 +18,22 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource'
-            }
+            },
+            // font 처리
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+            },
+            // csv, tsv 처리
+            {
+                test: /\.(csv|tsv)$/i,
+                use: ['csv-loader'],
+            },
+            // xml 처리
+            {
+                test: /\.xml$/i,
+                use: ['xml-loader'],
+            },
         ]
     }
 };
