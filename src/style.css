@@ -1,4 +1,13 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('./NotoSansKR-Black.otf') format('otf'),
+    url('./NotoSansKR-Bold.otf') format('otf');
+    font-weight: 600;
+    font-style: normal;
+}
+
 .hello {
     color: red;
-    background: url('./icon.jpg')
+    font-family: 'MyFont';
+    background: url('./icon.png')
 }
