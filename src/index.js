@@ -1,25 +1,16 @@
 import _ from "lodash"
-import './style.css'
-import Icon from "./icon.png"
-import Data from './data.xml';
-import Notes from './data.csv';
+import printMe from "./print";
 
 function component() {
     const element = document.createElement('div');
+    const btn = document.createElement('button');
 
     element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.classList.add('hello')
 
-    // 원래 있던 div에 이미지를 추가합니다.
-    const myIcon = new Image();
-    myIcon.src = Icon;
+    btn.innerHTML = 'Click me and check the console!';
+    btn.onclick = printMe;
 
-    element.appendChild(myIcon);
-
-    // xml
-    console.log(Data);
-    // csv
-    console.log(Notes);
+    element.appendChild(btn);
 
     return element;
 }
