@@ -10,6 +10,14 @@ module.exports = {
         // 웹 소켓 전송, hot 및 live 리로드 로직을 위한 개발 서버 클라이언트
         client: 'webpack-dev-server/client/index.js?hot=true&live-reload=true',
     },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
+            },
+        ],
+    },
     devtool: 'inline-source-map',
     devServer: {
         static: './dist',
